@@ -145,24 +145,17 @@ void SRenderService::installCamera(const SVector& eyePosition3D, const SVector& 
         y[2] /= mag;
     }
     
-#define M(row,col)  m[col * 4 + row]
-    M(0, 0) = x[0];
-    M(0, 1) = x[1];
-    M(0, 2) = x[2];
-    M(0, 3) = 0.0f;
-    M(1, 0) = y[0];
-    M(1, 1) = y[1];
-    M(1, 2) = y[2];
-    M(1, 3) = 0.0f;
-    M(2, 0) = z[0];
-    M(2, 1) = z[1];
-    M(2, 2) = z[2];
-    M(2, 3) = 0.0f;
-    M(3, 0) = 0.0f;
-    M(3, 1) = 0.0f;
-    M(3, 2) = 0.0f;
-    M(3, 3) = 1.0f;
-#undef M
+    m[0] = x[0];
+    m[4] = x[1];
+    m[8] = x[2];
+    m[1] = y[0];
+    m[5] = y[1];
+    m[9] = y[2];
+    m[2] = z[0];
+    m[6] = z[1];
+    m[10] = z[2];
+    m[15] = 1.0f;
+
     drawAPI->multMatrices(m);
     
     /* Translate Eye to Origin */
