@@ -11,6 +11,16 @@
 		4C3AD0F1237D97650029EECD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4C3AD0F0237D97650029EECD /* Assets.xcassets */; };
 		4C3AD0F4237D97650029EECD /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4C3AD0F2237D97650029EECD /* MainMenu.xib */; };
 		4C3AD0F7237D97650029EECD /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C3AD0F6237D97650029EECD /* main.m */; };
+		4C3AD100237D977E0029EECD /* SOpenGLView.mm in Sources */ = {isa = PBXBuildFile; fileRef = 4C3AD0FF237D977E0029EECD /* SOpenGLView.mm */; };
+		4C3AD113237D98BA0029EECD /* sopenglapi.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4C3AD10E237D98B90029EECD /* sopenglapi.cpp */; };
+		4C3AD114237D98BA0029EECD /* sdrawapi.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4C3AD10F237D98B90029EECD /* sdrawapi.cpp */; };
+		4C3AD115237D98BA0029EECD /* sgame.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4C3AD111237D98BA0029EECD /* sgame.cpp */; };
+		4C3AD118237D99F60029EECD /* sscenegraph.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4C3AD116237D99F60029EECD /* sscenegraph.cpp */; };
+		4C3AD11B237DA08E0029EECD /* shivatools.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4C3AD119237DA08E0029EECD /* shivatools.cpp */; };
+		4C3AD11F237DA2C90029EECD /* srenderservice.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4C3AD11D237DA2C90029EECD /* srenderservice.cpp */; };
+		4C725D292382DAB500D797D9 /* scolor.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4C725D282382DAB500D797D9 /* scolor.cpp */; };
+		4C725D2C2382DD4600D797D9 /* spoint.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4C725D2A2382DD4600D797D9 /* spoint.cpp */; };
+		4C725D302382E21600D797D9 /* spoint2d.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4C725D2F2382E21600D797D9 /* spoint2d.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +32,27 @@
 		4C3AD0F5237D97650029EECD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4C3AD0F6237D97650029EECD /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		4C3AD0F8237D97650029EECD /* mm6.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = mm6.entitlements; sourceTree = "<group>"; };
+		4C3AD0FE237D977E0029EECD /* SOpenGLView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SOpenGLView.h; sourceTree = "<group>"; };
+		4C3AD0FF237D977E0029EECD /* SOpenGLView.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = SOpenGLView.mm; sourceTree = "<group>"; };
+		4C3AD10C237D98B90029EECD /* sgame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = sgame.h; path = mmengine/sgame.h; sourceTree = "<group>"; };
+		4C3AD10D237D98B90029EECD /* sdrawapi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = sdrawapi.h; path = mmengine/sdrawapi.h; sourceTree = "<group>"; };
+		4C3AD10E237D98B90029EECD /* sopenglapi.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = sopenglapi.cpp; path = mmengine/sopenglapi.cpp; sourceTree = "<group>"; };
+		4C3AD10F237D98B90029EECD /* sdrawapi.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = sdrawapi.cpp; path = mmengine/sdrawapi.cpp; sourceTree = "<group>"; };
+		4C3AD110237D98B90029EECD /* shivatypes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = shivatypes.h; path = mmengine/shivatypes.h; sourceTree = "<group>"; };
+		4C3AD111237D98BA0029EECD /* sgame.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = sgame.cpp; path = mmengine/sgame.cpp; sourceTree = "<group>"; };
+		4C3AD112237D98BA0029EECD /* sopenglapi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = sopenglapi.h; path = mmengine/sopenglapi.h; sourceTree = "<group>"; };
+		4C3AD116237D99F60029EECD /* sscenegraph.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = sscenegraph.cpp; path = mmengine/sscenegraph.cpp; sourceTree = "<group>"; };
+		4C3AD117237D99F60029EECD /* sscenegraph.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = sscenegraph.h; path = mmengine/sscenegraph.h; sourceTree = "<group>"; };
+		4C3AD119237DA08E0029EECD /* shivatools.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = shivatools.cpp; path = mmengine/shivatools.cpp; sourceTree = "<group>"; };
+		4C3AD11A237DA08E0029EECD /* shivatools.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = shivatools.h; path = mmengine/shivatools.h; sourceTree = "<group>"; };
+		4C3AD11D237DA2C90029EECD /* srenderservice.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = srenderservice.cpp; path = mmengine/srenderservice.cpp; sourceTree = "<group>"; };
+		4C3AD11E237DA2C90029EECD /* srenderservice.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = srenderservice.h; path = mmengine/srenderservice.h; sourceTree = "<group>"; };
+		4C725D272382DAB500D797D9 /* scolor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = scolor.h; path = mmengine/scolor.h; sourceTree = "<group>"; };
+		4C725D282382DAB500D797D9 /* scolor.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = scolor.cpp; path = mmengine/scolor.cpp; sourceTree = "<group>"; };
+		4C725D2A2382DD4600D797D9 /* spoint.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = spoint.cpp; path = mmengine/spoint.cpp; sourceTree = "<group>"; };
+		4C725D2B2382DD4600D797D9 /* spoint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = spoint.h; path = mmengine/spoint.h; sourceTree = "<group>"; };
+		4C725D2E2382E21600D797D9 /* spoint2d.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = spoint2d.h; path = mmengine/spoint2d.h; sourceTree = "<group>"; };
+		4C725D2F2382E21600D797D9 /* spoint2d.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = spoint2d.cpp; path = mmengine/spoint2d.cpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -38,6 +69,7 @@
 		4C3AD0E1237D97650029EECD = {
 			isa = PBXGroup;
 			children = (
+				4C3AD101237D97DF0029EECD /* mmengine */,
 				4C3AD0EC237D97650029EECD /* mm6 */,
 				4C3AD0EB237D97650029EECD /* Products */,
 			);
@@ -54,6 +86,8 @@
 		4C3AD0EC237D97650029EECD /* mm6 */ = {
 			isa = PBXGroup;
 			children = (
+				4C3AD0FE237D977E0029EECD /* SOpenGLView.h */,
+				4C3AD0FF237D977E0029EECD /* SOpenGLView.mm */,
 				4C3AD0ED237D97650029EECD /* AppDelegate.h */,
 				4C3AD0EE237D97650029EECD /* AppDelegate.m */,
 				4C3AD0F0237D97650029EECD /* Assets.xcassets */,
@@ -63,6 +97,48 @@
 				4C3AD0F8237D97650029EECD /* mm6.entitlements */,
 			);
 			path = mm6;
+			sourceTree = "<group>";
+		};
+		4C3AD101237D97DF0029EECD /* mmengine */ = {
+			isa = PBXGroup;
+			children = (
+				4C725D2D2382DD9D00D797D9 /* geometry */,
+				4C3AD110237D98B90029EECD /* shivatypes.h */,
+				4C3AD11A237DA08E0029EECD /* shivatools.h */,
+				4C3AD119237DA08E0029EECD /* shivatools.cpp */,
+				4C3AD11C237DA22C0029EECD /* rendering */,
+				4C3AD10C237D98B90029EECD /* sgame.h */,
+				4C3AD111237D98BA0029EECD /* sgame.cpp */,
+				4C3AD117237D99F60029EECD /* sscenegraph.h */,
+				4C3AD116237D99F60029EECD /* sscenegraph.cpp */,
+			);
+			name = mmengine;
+			sourceTree = "<group>";
+		};
+		4C3AD11C237DA22C0029EECD /* rendering */ = {
+			isa = PBXGroup;
+			children = (
+				4C3AD11E237DA2C90029EECD /* srenderservice.h */,
+				4C3AD11D237DA2C90029EECD /* srenderservice.cpp */,
+				4C3AD112237D98BA0029EECD /* sopenglapi.h */,
+				4C3AD10E237D98B90029EECD /* sopenglapi.cpp */,
+				4C3AD10D237D98B90029EECD /* sdrawapi.h */,
+				4C3AD10F237D98B90029EECD /* sdrawapi.cpp */,
+			);
+			name = rendering;
+			sourceTree = "<group>";
+		};
+		4C725D2D2382DD9D00D797D9 /* geometry */ = {
+			isa = PBXGroup;
+			children = (
+				4C725D2F2382E21600D797D9 /* spoint2d.cpp */,
+				4C725D2E2382E21600D797D9 /* spoint2d.h */,
+				4C725D2B2382DD4600D797D9 /* spoint.h */,
+				4C725D2A2382DD4600D797D9 /* spoint.cpp */,
+				4C725D272382DAB500D797D9 /* scolor.h */,
+				4C725D282382DAB500D797D9 /* scolor.cpp */,
+			);
+			name = geometry;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -134,7 +210,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4C3AD118237D99F60029EECD /* sscenegraph.cpp in Sources */,
+				4C725D2C2382DD4600D797D9 /* spoint.cpp in Sources */,
+				4C725D302382E21600D797D9 /* spoint2d.cpp in Sources */,
+				4C725D292382DAB500D797D9 /* scolor.cpp in Sources */,
+				4C3AD100237D977E0029EECD /* SOpenGLView.mm in Sources */,
+				4C3AD113237D98BA0029EECD /* sopenglapi.cpp in Sources */,
 				4C3AD0F7237D97650029EECD /* main.m in Sources */,
+				4C3AD11F237DA2C90029EECD /* srenderservice.cpp in Sources */,
+				4C3AD114237D98BA0029EECD /* sdrawapi.cpp in Sources */,
+				4C3AD115237D98BA0029EECD /* sgame.cpp in Sources */,
+				4C3AD11B237DA08E0029EECD /* shivatools.cpp in Sources */,
 				4C3AD0EF237D97650029EECD /* AppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

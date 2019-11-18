@@ -7,22 +7,32 @@
 //
 
 #import "AppDelegate.h"
+#import "SOpenGLView.h"
 
 @interface AppDelegate ()
 
 @property (weak) IBOutlet NSWindow *window;
+
 @end
 
 @implementation AppDelegate
 
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification {
-    // Insert code here to initialize your application
+    NSOpenGLPixelFormatAttribute openglPixelFormatAttributes [] = {
+        NSOpenGLPFANoRecovery,
+        NSOpenGLPFAColorSize, 32,
+        NSOpenGLPFADepthSize, 32,
+        NSOpenGLPFAMaximumPolicy,
+        NSOpenGLPFADoubleBuffer,
+        NSOpenGLPFAAccelerated,
+        0
+    };
+    NSOpenGLPixelFormat* openglPixelFormat = [[NSOpenGLPixelFormat alloc] initWithAttributes: openglPixelFormatAttributes];
+    SOpenGLView* openglView = [[SOpenGLView alloc] initWithFrame: self.window.frame
+                                                     pixelFormat: openglPixelFormat];
+    
+    self.window.contentView = openglView;
+    [self.window makeFirstResponder: openglView];
 }
-
-
-- (void)applicationWillTerminate:(NSNotification *)aNotification {
-    // Insert code here to tear down your application
-}
-
 
 @end
