@@ -4,6 +4,7 @@
 //=============================================================================
 
 #include "sdrawapi.h"
+#include "svector.h"
 
 //=============================================================================
 
@@ -17,6 +18,8 @@ class SRenderService
 private:
     SDrawAPI *drawAPI;
     void drawGrid2D(const SFloat rowsNumber, const SFloat columnsNumber, const SFloat scale);
+    void drawGrid(const SFloat rowsNumber, const SFloat columnsNumber, const SFloat scale);
+    void installCamera(const SVector& eyePosition3D, const SVector& center3D, const SVector& upVector3D);
 
 public:
     SRenderService();

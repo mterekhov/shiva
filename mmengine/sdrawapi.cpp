@@ -64,6 +64,12 @@ void SDrawAPI::drawLine2D(const SPoint2D& p1, const SPoint2D& p2)
 
 //==============================================================================
 
+void SDrawAPI::drawLine(const SPoint& p1, const SPoint& p2)
+{
+}
+
+//==============================================================================
+
 void SDrawAPI::drawPoints(const SFloat *points, const SInt pointsCount)
 {
 }
@@ -93,6 +99,20 @@ SColor SDrawAPI::currentColor()
 
 void SDrawAPI::currentColor(const SColor& color)
 {
+}
+
+//==============================================================================
+
+void SDrawAPI::multMatrices(SFloat *matrix)
+{
+    
+}
+
+//==============================================================================
+
+void SDrawAPI::translate(const SPoint& point)
+{
+    
 }
 
 //==============================================================================

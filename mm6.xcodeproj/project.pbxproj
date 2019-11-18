@@ -21,6 +21,7 @@
 		4C725D292382DAB500D797D9 /* scolor.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4C725D282382DAB500D797D9 /* scolor.cpp */; };
 		4C725D2C2382DD4600D797D9 /* spoint.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4C725D2A2382DD4600D797D9 /* spoint.cpp */; };
 		4C725D302382E21600D797D9 /* spoint2d.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4C725D2F2382E21600D797D9 /* spoint2d.cpp */; };
+		4C725D332382E51B00D797D9 /* svector.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4C725D312382E51B00D797D9 /* svector.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -53,6 +54,8 @@
 		4C725D2B2382DD4600D797D9 /* spoint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = spoint.h; path = mmengine/spoint.h; sourceTree = "<group>"; };
 		4C725D2E2382E21600D797D9 /* spoint2d.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = spoint2d.h; path = mmengine/spoint2d.h; sourceTree = "<group>"; };
 		4C725D2F2382E21600D797D9 /* spoint2d.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = spoint2d.cpp; path = mmengine/spoint2d.cpp; sourceTree = "<group>"; };
+		4C725D312382E51B00D797D9 /* svector.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = svector.cpp; path = mmengine/svector.cpp; sourceTree = "<group>"; };
+		4C725D322382E51B00D797D9 /* svector.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = svector.h; path = mmengine/svector.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -131,6 +134,8 @@
 		4C725D2D2382DD9D00D797D9 /* geometry */ = {
 			isa = PBXGroup;
 			children = (
+				4C725D312382E51B00D797D9 /* svector.cpp */,
+				4C725D322382E51B00D797D9 /* svector.h */,
 				4C725D2F2382E21600D797D9 /* spoint2d.cpp */,
 				4C725D2E2382E21600D797D9 /* spoint2d.h */,
 				4C725D2B2382DD4600D797D9 /* spoint.h */,
@@ -212,6 +217,7 @@
 			files = (
 				4C3AD118237D99F60029EECD /* sscenegraph.cpp in Sources */,
 				4C725D2C2382DD4600D797D9 /* spoint.cpp in Sources */,
+				4C725D332382E51B00D797D9 /* svector.cpp in Sources */,
 				4C725D302382E21600D797D9 /* spoint2d.cpp in Sources */,
 				4C725D292382DAB500D797D9 /* scolor.cpp in Sources */,
 				4C3AD100237D977E0029EECD /* SOpenGLView.mm in Sources */,

@@ -145,10 +145,39 @@ void SOpenGLAPI::drawLine2D(const SPoint2D& p1, const SPoint2D& p2)
 
 //==============================================================================
 
+void SOpenGLAPI::drawLine(const SPoint& p1, const SPoint& p2)
+{
+    SFloat line[6] = {0};
+    line[0] = p1.x;
+    line[1] = p1.y;
+    line[2] = p1.z;
+    line[3] = p2.x;
+    line[4] = p2.y;
+    line[5] = p2.z;
+    glVertexPointer(3, GL_FLOAT, 0, line);
+    glDrawArrays(GL_LINES, 0, 2);
+}
+    
+//==============================================================================
+
 void SOpenGLAPI::drawPoints(const SFloat *points, const SInt pointsCount)
 {
     glVertexPointer(2, GL_FLOAT, 0, points);
     glDrawArrays(GL_POINTS, 0, pointsCount);
+}
+
+//==============================================================================
+
+void SOpenGLAPI::multMatrices(SFloat *matrix)
+{
+    glMultMatrixf(matrix);
+}
+
+//==============================================================================
+
+void SOpenGLAPI::translate(const SPoint& point)
+{
+    glTranslatef(point.x, point.y, point.z);
 }
 
 //==============================================================================

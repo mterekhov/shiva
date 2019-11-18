@@ -9,17 +9,19 @@
 
 namespace spcShiva
 {
-    
+
+#define FLOAT_PRECISION 0.000001f
+
 //==============================================================================
 
-    typedef std::string SString;
-    typedef float SFloat;
-    typedef unsigned int SUInt;
-    typedef int SInt;
-    typedef char SChar;
+typedef std::string SString;
+typedef float SFloat;
+typedef unsigned int SUInt;
+typedef int SInt;
+typedef char SChar;
 
 //=============================================================================
-    
+
 }   //  namespace spcShiva
 
 //==============================================================================
