@@ -105,6 +105,7 @@
 		4C3AD101237D97DF0029EECD /* mmengine */ = {
 			isa = PBXGroup;
 			children = (
+				4C725D532382EF2100D797D9 /* scenegraph */,
 				4C725D3C2382E85700D797D9 /* sgame.cpp */,
 				4C725D392382E85700D797D9 /* sgame.h */,
 				4C725D3D2382E85700D797D9 /* shivatools.cpp */,
@@ -112,8 +113,6 @@
 				4C725D382382E85700D797D9 /* shivatypes.h */,
 				4C725D342382E85700D797D9 /* srenderservice.cpp */,
 				4C725D352382E85700D797D9 /* srenderservice.h */,
-				4C725D432382E85800D797D9 /* sscenegraph.cpp */,
-				4C725D452382E85800D797D9 /* sscenegraph.h */,
 				4C725D2D2382DD9D00D797D9 /* geometry */,
 				4C3AD11C237DA22C0029EECD /* rendering */,
 			);
@@ -144,6 +143,15 @@
 				4C725D3F2382E85700D797D9 /* svector.h */,
 			);
 			name = geometry;
+			sourceTree = "<group>";
+		};
+		4C725D532382EF2100D797D9 /* scenegraph */ = {
+			isa = PBXGroup;
+			children = (
+				4C725D452382E85800D797D9 /* sscenegraph.h */,
+				4C725D432382E85800D797D9 /* sscenegraph.cpp */,
+			);
+			name = scenegraph;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

@@ -15,7 +15,7 @@ static const CGFloat FramesPerSecond = 1.0f / 60.0f;
 
 @property (nonatomic, assign) NSTimeInterval animationInterval;
 @property (nonatomic, strong) NSTimer *animationTimer;
-@property (nonatomic, assign) spcShiva::SGame *mm6Engine;
+@property (nonatomic, assign) spcShiva::SGame *shivaEngine;
 
 @end
 
@@ -32,8 +32,8 @@ static const CGFloat FramesPerSecond = 1.0f / 60.0f;
     self.openGLContext.view = self;
     _animationInterval = FramesPerSecond;
     
-    _mm6Engine = new spcShiva::SGame();
-    _mm6Engine->updateScreenSize(CGRectGetWidth(self.bounds), CGRectGetHeight(self.bounds));
+    _shivaEngine = new spcShiva::SGame();
+    _shivaEngine->updateScreenSize(CGRectGetWidth(self.bounds), CGRectGetHeight(self.bounds));
     
     [self startAnimation];
     
@@ -41,19 +41,19 @@ static const CGFloat FramesPerSecond = 1.0f / 60.0f;
 }
 
 - (void)dealloc {
-    delete self.mm6Engine;
+    delete self.shivaEngine;
 }
 
 - (void)viewDidEndLiveResize
 {
     [self stopAnimation];
-    self.mm6Engine->updateScreenSize(CGRectGetWidth(self.bounds), CGRectGetHeight(self.bounds));
+    self.shivaEngine->updateScreenSize(CGRectGetWidth(self.bounds), CGRectGetHeight(self.bounds));
     [self startAnimation];
 }
 
 - (void)animationTimerHandler
 {
-    self.mm6Engine->processGameCycle();
+    self.shivaEngine->processGameCycle();
     [self.openGLContext flushBuffer];
 }
 
@@ -81,12 +81,12 @@ static const CGFloat FramesPerSecond = 1.0f / 60.0f;
 
 - (void)keyDown:(NSEvent *)theEvent
 {
-    self.mm6Engine->processKeyboardEvent(theEvent.keyCode);
+    self.shivaEngine->processKeyboardEvent(theEvent.keyCode);
 }
 
 - (void)mouseUp:(NSEvent *)event
 {
-    self.mm6Engine->processMouseEvent(event.locationInWindow.x, event.locationInWindow.y);
+    self.shivaEngine->processMouseEvent(event.locationInWindow.x, event.locationInWindow.y);
 }
 
 @end
