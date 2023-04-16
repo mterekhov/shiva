@@ -1,0 +1,383 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		DEC9070229EC2580008C398D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEC9070129EC2580008C398D /* AppDelegate.swift */; };
+		DEC9070429EC2580008C398D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEC9070329EC2580008C398D /* ViewController.swift */; };
+		DEC9070629EC2581008C398D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DEC9070529EC2581008C398D /* Assets.xcassets */; };
+		DEC9071129EC2844008C398D /* Application.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEC9071029EC2844008C398D /* Application.swift */; };
+		DEE7AB6629EC480600840D73 /* CPPBridge.mm in Sources */ = {isa = PBXBuildFile; fileRef = DEE7AB6529EC480600840D73 /* CPPBridge.mm */; };
+		DEE7AB6929EC486A00840D73 /* sishivaengine.cpp in Sources */ = {isa = PBXBuildFile; fileRef = DEE7AB6729EC486A00840D73 /* sishivaengine.cpp */; };
+		DEE7AB6E29EC4B2200840D73 /* simacoscitra.cpp in Sources */ = {isa = PBXBuildFile; fileRef = DEE7AB6C29EC4B2200840D73 /* simacoscitra.cpp */; };
+		DEE7AB7229EC4DA000840D73 /* sipoint2d.cpp in Sources */ = {isa = PBXBuildFile; fileRef = DEE7AB7029EC4DA000840D73 /* sipoint2d.cpp */; };
+		DEE7AB7629EC4FC900840D73 /* sicolor.cpp in Sources */ = {isa = PBXBuildFile; fileRef = DEE7AB7429EC4FC900840D73 /* sicolor.cpp */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		DEC906FE29EC2580008C398D /* shiva.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = shiva.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		DEC9070129EC2580008C398D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		DEC9070329EC2580008C398D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		DEC9070529EC2581008C398D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		DEC9070A29EC2581008C398D /* shiva.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = shiva.entitlements; sourceTree = "<group>"; };
+		DEC9071029EC2844008C398D /* Application.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Application.swift; sourceTree = "<group>"; };
+		DEE7AB6429EC480600840D73 /* CPPBridge.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CPPBridge.h; sourceTree = "<group>"; };
+		DEE7AB6529EC480600840D73 /* CPPBridge.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = CPPBridge.mm; sourceTree = "<group>"; };
+		DEE7AB6729EC486A00840D73 /* sishivaengine.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = sishivaengine.cpp; sourceTree = "<group>"; };
+		DEE7AB6829EC486A00840D73 /* sishivaengine.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = sishivaengine.h; sourceTree = "<group>"; };
+		DEE7AB6B29EC493500840D73 /* shiva.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = shiva.h; sourceTree = "<group>"; };
+		DEE7AB6C29EC4B2200840D73 /* simacoscitra.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = simacoscitra.cpp; sourceTree = "<group>"; };
+		DEE7AB6D29EC4B2200840D73 /* sicitrai.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = sicitrai.h; sourceTree = "<group>"; };
+		DEE7AB6F29EC4C5200840D73 /* simacoscitra.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = simacoscitra.h; sourceTree = "<group>"; };
+		DEE7AB7029EC4DA000840D73 /* sipoint2d.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = sipoint2d.cpp; sourceTree = "<group>"; };
+		DEE7AB7129EC4DA000840D73 /* sipoint2d.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = sipoint2d.h; sourceTree = "<group>"; };
+		DEE7AB7329EC4E2F00840D73 /* shivatypes.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = shivatypes.h; sourceTree = "<group>"; };
+		DEE7AB7429EC4FC900840D73 /* sicolor.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = sicolor.cpp; sourceTree = "<group>"; };
+		DEE7AB7529EC4FC900840D73 /* sicolor.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = sicolor.h; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		DEC906FB29EC2580008C398D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		DEC906F529EC2580008C398D = {
+			isa = PBXGroup;
+			children = (
+				DEC9070029EC2580008C398D /* shiva */,
+				DEC906FF29EC2580008C398D /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		DEC906FF29EC2580008C398D /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				DEC906FE29EC2580008C398D /* shiva.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		DEC9070029EC2580008C398D /* shiva */ = {
+			isa = PBXGroup;
+			children = (
+				DEE7AB6A29EC491200840D73 /* MacOS */,
+				DEE7AB6329EC480600840D73 /* engine */,
+				DEC9071029EC2844008C398D /* Application.swift */,
+				DEC9070129EC2580008C398D /* AppDelegate.swift */,
+				DEC9070329EC2580008C398D /* ViewController.swift */,
+				DEC9070529EC2581008C398D /* Assets.xcassets */,
+				DEC9070A29EC2581008C398D /* shiva.entitlements */,
+			);
+			path = shiva;
+			sourceTree = "<group>";
+		};
+		DEE7AB6329EC480600840D73 /* engine */ = {
+			isa = PBXGroup;
+			children = (
+				DEE7AB6D29EC4B2200840D73 /* sicitrai.h */,
+				DEE7AB6829EC486A00840D73 /* sishivaengine.h */,
+				DEE7AB6729EC486A00840D73 /* sishivaengine.cpp */,
+				DEE7AB6B29EC493500840D73 /* shiva.h */,
+				DEE7AB7329EC4E2F00840D73 /* shivatypes.h */,
+				DEE7AB7129EC4DA000840D73 /* sipoint2d.h */,
+				DEE7AB7029EC4DA000840D73 /* sipoint2d.cpp */,
+				DEE7AB7529EC4FC900840D73 /* sicolor.h */,
+				DEE7AB7429EC4FC900840D73 /* sicolor.cpp */,
+			);
+			path = engine;
+			sourceTree = "<group>";
+		};
+		DEE7AB6A29EC491200840D73 /* MacOS */ = {
+			isa = PBXGroup;
+			children = (
+				DEE7AB6F29EC4C5200840D73 /* simacoscitra.h */,
+				DEE7AB6C29EC4B2200840D73 /* simacoscitra.cpp */,
+				DEE7AB6429EC480600840D73 /* CPPBridge.h */,
+				DEE7AB6529EC480600840D73 /* CPPBridge.mm */,
+			);
+			path = MacOS;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		DEC906FD29EC2580008C398D /* shiva */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DEC9070D29EC2581008C398D /* Build configuration list for PBXNativeTarget "shiva" */;
+			buildPhases = (
+				DEC906FA29EC2580008C398D /* Sources */,
+				DEC906FB29EC2580008C398D /* Frameworks */,
+				DEC906FC29EC2580008C398D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = shiva;
+			productName = shiva;
+			productReference = DEC906FE29EC2580008C398D /* shiva.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		DEC906F629EC2580008C398D /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1420;
+				LastUpgradeCheck = 1420;
+				TargetAttributes = {
+					DEC906FD29EC2580008C398D = {
+						CreatedOnToolsVersion = 14.2;
+					};
+				};
+			};
+			buildConfigurationList = DEC906F929EC2580008C398D /* Build configuration list for PBXProject "shiva" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = DEC906F529EC2580008C398D;
+			productRefGroup = DEC906FF29EC2580008C398D /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				DEC906FD29EC2580008C398D /* shiva */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		DEC906FC29EC2580008C398D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DEC9070629EC2581008C398D /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		DEC906FA29EC2580008C398D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DEE7AB6629EC480600840D73 /* CPPBridge.mm in Sources */,
+				DEC9071129EC2844008C398D /* Application.swift in Sources */,
+				DEC9070429EC2580008C398D /* ViewController.swift in Sources */,
+				DEE7AB6929EC486A00840D73 /* sishivaengine.cpp in Sources */,
+				DEC9070229EC2580008C398D /* AppDelegate.swift in Sources */,
+				DEE7AB6E29EC4B2200840D73 /* simacoscitra.cpp in Sources */,
+				DEE7AB7229EC4DA000840D73 /* sipoint2d.cpp in Sources */,
+				DEE7AB7629EC4FC900840D73 /* sicolor.cpp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		DEC9070B29EC2581008C398D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 13.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		DEC9070C29EC2581008C398D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 13.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = macosx;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+			};
+			name = Release;
+		};
+		DEC9070E29EC2581008C398D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = shiva/shiva.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = TM98MB69S4;
+				ENABLE_HARDENED_RUNTIME = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				INFOPLIST_KEY_NSPrincipalClass = "$(PRODUCT_NAME).Application";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = ai.visionlabs.shiva;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		DEC9070F29EC2581008C398D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = shiva/shiva.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = TM98MB69S4;
+				ENABLE_HARDENED_RUNTIME = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				INFOPLIST_KEY_NSPrincipalClass = "$(PRODUCT_NAME).Application";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = ai.visionlabs.shiva;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		DEC906F929EC2580008C398D /* Build configuration list for PBXProject "shiva" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DEC9070B29EC2581008C398D /* Debug */,
+				DEC9070C29EC2581008C398D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DEC9070D29EC2581008C398D /* Build configuration list for PBXNativeTarget "shiva" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DEC9070E29EC2581008C398D /* Debug */,
+				DEC9070F29EC2581008C398D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = DEC906F629EC2580008C398D /* Project object */;
+}
