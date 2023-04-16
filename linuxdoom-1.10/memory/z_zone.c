@@ -13,7 +13,8 @@
 //  because it will get overwritten automatically if needed.
 // 
 
-#define ZONEID	0x1d4a11
+#define ZONEID 0x1d4a11
+#define MINFRAGMENT 64
 
 typedef struct {
     // total bytes malloced, including header
@@ -26,31 +27,11 @@ typedef struct {
 memzone_t* mainzone;
 
 //
-// Z_ClearZone
-//
-void Z_ClearZone(memzone_t* zone) {
-    memblock_t* block;
-    
-    // set the entire zone to one free block
-    zone->blocklist.next = zone->blocklist.prev = block = (memblock_t *)((byte *)zone + sizeof(memzone_t));
-    zone->blocklist.user = (void *)zone;
-    zone->blocklist.tag = PU_STATIC;
-    zone->rover = block;
-    
-    block->prev = block->next = &zone->blocklist;
-    
-    // NULL indicates a free block.
-    block->user = NULL;
-    
-    block->size = zone->size - sizeof(memzone_t);
-}
-
-//
 // Z_Init
 //
 void Z_Init()
 {
-    memblock_t*	block;
+    memblock_t*    block;
     int size;
     
     mainzone = (memzone_t *)I_ZoneBase(&size);
@@ -72,71 +53,15 @@ void Z_Init()
 }
 
 //
-// Z_Free
-//
-void Z_Free(void* ptr) {
-    memblock_t* block;
-    memblock_t* other;
-    
-    block = (memblock_t *) ((byte *)ptr - sizeof(memblock_t));
-    
-    if (block->id != ZONEID) {
-        I_Error ("Z_Free: freed a pointer without ZONEID");
-    }
-    
-    if (block->user > (void **)0x100) {
-        // smaller values are not pointers
-        // Note: OS-dependend?
-        
-        // clear the user's mark
-        *block->user = 0;
-    }
-    
-    // mark as free
-    block->user = NULL;
-    block->tag = 0;
-    block->id = 0;
-    
-    other = block->prev;
-    
-    if (!other->user) {
-        // merge with previous free block
-        other->size += block->size;
-        other->next = block->next;
-        other->next->prev = other;
-        
-        if (block == mainzone->rover) {
-            mainzone->rover = other;
-        }
-        
-        block = other;
-    }
-    
-    other = block->next;
-    if (!other->user) {
-        // merge the next free block onto the end
-        block->size += other->size;
-        block->next = other->next;
-        block->next->prev = block;
-        
-        if (other == mainzone->rover) {
-            mainzone->rover = block;
-        }
-    }
-}
-
-//
 // Z_Malloc
 // You can pass a NULL user if the tag is < PU_PURGELEVEL.
 //
-#define MINFRAGMENT		64
-
 void* Z_Malloc(int size, int tag, void* user) {
     int extra;
-    memblock_t*	start;
+    memblock_t*    start;
     memblock_t* rover;
     memblock_t* newblock;
-    memblock_t*	base;
+    memblock_t*    base;
     
     size = (size + 3) & ~3;
     
@@ -229,11 +154,66 @@ void* Z_Malloc(int size, int tag, void* user) {
 }
 
 //
+// Z_Free
+//
+void Z_Free(void* ptr) {
+    memblock_t* block;
+    memblock_t* other;
+    
+    block = (memblock_t *) ((byte *)ptr - sizeof(memblock_t));
+    
+    if (block->id != ZONEID) {
+        I_Error ("Z_Free: freed a pointer without ZONEID");
+    }
+    
+    if (block->user > (void **)0x100) {
+        // smaller values are not pointers
+        // Note: OS-dependend?
+        
+        // clear the user's mark
+        *block->user = 0;
+    }
+    
+    // mark as free
+    block->user = NULL;
+    block->tag = 0;
+    block->id = 0;
+    
+    other = block->prev;
+    
+    if (!other->user) {
+        // merge with previous free block
+        other->size += block->size;
+        other->next = block->next;
+        other->next->prev = other;
+        
+        if (block == mainzone->rover) {
+            mainzone->rover = other;
+        }
+        
+        block = other;
+    }
+    
+    other = block->next;
+    if (!other->user) {
+        // merge the next free block onto the end
+        block->size += other->size;
+        block->next = other->next;
+        block->next->prev = block;
+        
+        if (other == mainzone->rover) {
+            mainzone->rover = block;
+        }
+    }
+}
+
+
+//
 // Z_FreeTags
 //
 void Z_FreeTags(int lowtag, int hightag) {
-    memblock_t*	block;
-    memblock_t*	next;
+    memblock_t*    block;
+    memblock_t*    next;
     
     for (block = mainzone->blocklist.next; block != &mainzone->blocklist; block = next) {
         // get link before freeing
@@ -255,7 +235,7 @@ void Z_FreeTags(int lowtag, int hightag) {
 // Note: TFileDumpHeap( stdout ) ?
 //
 void Z_DumpHeap(int lowtag, int hightag) {
-    memblock_t*	block;
+    memblock_t*    block;
     
     printf ("zone size: %i  location: %p\n", mainzone->size,mainzone);
     
@@ -290,7 +270,7 @@ void Z_DumpHeap(int lowtag, int hightag) {
 // Z_FileDumpHeap
 //
 void Z_FileDumpHeap(FILE* f) {
-    memblock_t*	block;
+    memblock_t*    block;
     
     fprintf(f, "zone size: %i  location: %p\n", mainzone->size, mainzone);
     
@@ -320,7 +300,7 @@ void Z_FileDumpHeap(FILE* f) {
 // Z_CheckHeap
 //
 void Z_CheckHeap() {
-    memblock_t*	block;
+    memblock_t*    block;
     
     for (block = mainzone->blocklist.next ; ; block = block->next) {
         if (block->next == &mainzone->blocklist) {
@@ -346,7 +326,7 @@ void Z_CheckHeap() {
 // Z_ChangeTag
 //
 void Z_ChangeTag2(void* ptr, int tag ) {
-    memblock_t*	block;
+    memblock_t*    block;
     
     block = (memblock_t *) ((byte *)ptr - sizeof(memblock_t));
     
@@ -378,3 +358,24 @@ int Z_FreeMemory() {
     
     return free;
 }
+
+//
+// Z_ClearZone
+//
+void Z_ClearZone(memzone_t* zone) {
+    memblock_t* block;
+    
+    // set the entire zone to one free block
+    zone->blocklist.next = zone->blocklist.prev = block = (memblock_t *)((byte *)zone + sizeof(memzone_t));
+    zone->blocklist.user = (void *)zone;
+    zone->blocklist.tag = PU_STATIC;
+    zone->rover = block;
+    
+    block->prev = block->next = &zone->blocklist;
+    
+    // NULL indicates a free block.
+    block->user = NULL;
+    
+    block->size = zone->size - sizeof(memzone_t);
+}
+
